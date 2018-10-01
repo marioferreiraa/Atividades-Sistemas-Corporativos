@@ -9,14 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Aluno implements Serializable, IEntidade{
+public class Aluno extends Pessoa implements Serializable, IEntidade{
 	
 	@Id
 	@Column(name="CPF", length=14)
 	private String cpfAluno;
-	
-	@Column(name="nome_aluno")
-	private String nomeAluno;
 	
 	@ManyToMany
 	private List<Disciplinas> listaDisciplinas;
@@ -27,14 +24,6 @@ public class Aluno implements Serializable, IEntidade{
 
 	public void setCpfAluno(String cpfAluno) {
 		this.cpfAluno = cpfAluno;
-	}
-
-	public String getNomeAluno() {
-		return nomeAluno;
-	}
-
-	public void setNomeAluno(String nomeAluno) {
-		this.nomeAluno = nomeAluno;
 	}
 	
 	public List<Disciplinas> getListaDisciplinas() {

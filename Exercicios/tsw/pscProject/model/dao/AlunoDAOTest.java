@@ -14,10 +14,10 @@ public class AlunoDAOTest {
 	public void testarCreateAluno() {
 		/*Aluno aluno = new Aluno();
 		aluno.setCpfAluno("492.858.970-02");
-		aluno.setNomeAluno("Alucard Santos");
+		aluno.setNome("Alucard Santos");
 		
 		AlunoDAO alunoDao = new AlunoDAO();
-		alunoDao.inserir(aluno);*/
+		alunoDao.inserir(aluno);
 		
 		List<Disciplinas> listaDisciplinas = new ArrayList<>();
 		
@@ -33,8 +33,16 @@ public class AlunoDAOTest {
 		
 		Aluno aluno = new Aluno();
 		aluno.setCpfAluno("492.858.970-04");
-		aluno.setNomeAluno("Harry Potter");
+		aluno.setNome("Harry Potter");
 		aluno.setListaDisciplinas(listaDisciplinas);
+		
+		AlunoDAO alunoDao = new AlunoDAO();
+		alunoDao.inserir(aluno);*/
+		
+		Aluno aluno = new Aluno();
+		aluno.setCpfAluno("492.858.970-05");
+		aluno.setNome("Ronnald Weasley");
+		aluno.setTelefone("81987654321");
 		
 		AlunoDAO alunoDao = new AlunoDAO();
 		alunoDao.inserir(aluno);
